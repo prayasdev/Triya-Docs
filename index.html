@@ -21,6 +21,7 @@
         <span class="brand-text">Triya <span>Pro</span></span>
       </a>
       <ul class="nav-links">
+        <li><a href="#showcase">Showcase</a></li>
         <li><a href="#features">Capabilities</a></li>
         <li><a href="#metrics">Benchmarks</a></li>
         <li><a href="#comparison">Why Triya</a></li>
@@ -40,23 +41,52 @@
         <span>⚡ SUB-SECOND TOURNAMENT ASSIST</span>
       </div>
       <h1>Dominating 10-Second<br><span>Live Trivia Tournaments.</span></h1>
-      <p>
-        Engineered specifically for countdown-driven mobile quiz shows. Instant screen capture, on-device optical recognition, and statistical candidate verification before the clock runs out.
+      <p class="hero-desc">
+        Engineered specifically for countdown-driven mobile quiz shows. Instant screen capture, on-device optical recognition, and real-time candidate verification before the clock runs out.
       </p>
 
-      <!-- Interactive HUD Simulator -->
-      <div class="hud-demo-container">
-        <div class="hud-demo-header">
-          <span class="hud-live-tag"><span class="hud-live-dot"></span> Interactive HUD Preview</span>
-          <span>Click Overlay to Scan Next</span>
+      <!-- Hero Visual Double Stage -->
+      <div class="hero-stage-grid">
+        
+        <!-- Live Action Card (Actual Gameplay) -->
+        <div class="hero-action-card" onclick="openLightbox(0)">
+          <div class="hero-action-badge">
+            <span class="live-dot"></span> LIVE GAMEPLAY VERIFIED
+          </div>
+          <div class="hero-phone-mockup">
+            <img src="assets/images/Screenshot_20261025_123405.jpg" alt="Triya Pro running live in Swagbucks LIVE tournament" class="hero-action-img" loading="eager">
+            <div class="hero-overlay-callout">
+              <div class="callout-pill">
+                <span class="callout-icon">🎯</span>
+                <div class="callout-text">
+                  <strong>Swagbucks LIVE • 19,363 Players</strong>
+                  <span>Answer confirmed in emerald green &lt; 1.2s</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-action-footer">
+            <span>Tap to enlarge live tournament capture</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+          </div>
         </div>
-        <div id="hudContainer">
-          <!-- Rendered by script.js -->
+
+        <!-- Interactive HUD Simulator -->
+        <div class="hud-demo-container">
+          <div class="hud-demo-header">
+            <span class="hud-live-tag"><span class="hud-live-dot"></span> Interactive HUD Preview</span>
+            <span class="hud-instruction-badge">Click Overlay to Scan Next</span>
+          </div>
+          <div id="hudContainer">
+            <!-- Rendered by script.js -->
+          </div>
+          <div class="demo-instruction">
+            ⚡ <em>Live Interactive Simulator: Click the floating card to trigger simulated scans.</em>
+          </div>
         </div>
-        <div class="demo-instruction">
-          ⚡ <em>Live Interactive Simulator: Click the card to trigger next question scan.</em>
-        </div>
+
       </div>
+
     </div>
   </section>
 
@@ -84,6 +114,188 @@
     </div>
   </section>
 
+  <!-- Product Showcase / Visual Gallery -->
+  <section id="showcase" class="showcase-section">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge-pill mini-badge">
+          <span>📸 PRODUCT WALKTHROUGH</span>
+        </div>
+        <h2>Showcase & Experience</h2>
+        <p>Explore the native Android interface, real tournament gameplay, and streamlined floating HUD in action.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="gallery-tabs">
+        <button class="tab-btn active" onclick="filterGallery('all')">All Views (8)</button>
+        <button class="tab-btn" onclick="filterGallery('live')">Live Tournament</button>
+        <button class="tab-btn" onclick="filterGallery('interface')">Interface & Navigation</button>
+        <button class="tab-btn" onclick="filterGallery('settings')">Settings & Calibration</button>
+      </div>
+
+      <!-- Screenshot Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- 1. Live Gameplay -->
+        <div class="gallery-item" data-category="live" onclick="openLightbox(0)">
+          <div class="gallery-card">
+            <div class="gallery-img-wrap">
+              <span class="gallery-tag highlight-tag">Live Tournament</span>
+              <img src="assets/images/Screenshot_20261025_123405.jpg" alt="Triya Pro in live Swagbucks tournament" loading="lazy">
+              <div class="gallery-zoom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3>Live Tournament Action (Swagbucks LIVE)</h3>
+              <p>Active 19,363-player tournament round. Floating HUD highlights winning candidate in emerald green with sub-second turnaround.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Home Dashboard -->
+        <div class="gallery-item" data-category="interface" onclick="openLightbox(1)">
+          <div class="gallery-card">
+            <div class="gallery-img-wrap">
+              <span class="gallery-tag">Home Dashboard</span>
+              <img src="assets/images/Screenshot_20261025_123141.jpg" alt="Triya Pro Inactive Dashboard" loading="lazy">
+              <div class="gallery-zoom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3>1-Tap Assistant Activation</h3>
+              <p>Clean Material You interface with quick master toggle and instant game profile selection pill.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Pre-Game Validation -->
+        <div class="gallery-item" data-category="live" onclick="openLightbox(2)">
+          <div class="gallery-card">
+            <div class="gallery-img-wrap">
+              <span class="gallery-tag">Validation Suite</span>
+              <img src="assets/images/Screenshot_20261025_123230.jpg" alt="Algorithm Quick Test validation screen" loading="lazy">
+              <div class="gallery-zoom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3>Pre-Tournament Quick Test</h3>
+              <p>Integrated test suite to benchmark questions and verify floating HUD styling before competitive live games.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Profile Calibration -->
+        <div class="gallery-item" data-category="settings" onclick="openLightbox(3)">
+          <div class="gallery-card">
+            <div class="gallery-img-wrap">
+              <span class="gallery-tag">ROI Profiles</span>
+              <img src="assets/images/Screenshot_20261025_123259.jpg" alt="Game Profile selection modal" loading="lazy">
+              <div class="gallery-zoom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3>Universal ROI Profile Selector</h3>
+              <p>Switch between tailored screen calibration presets for Swagbucks, Loco, HQ Trivia, or custom tournaments.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Settings: System & Transport -->
+        <div class="gallery-item" data-category="settings" onclick="openLightbox(4)">
+          <div class="gallery-card">
+            <div class="gallery-img-wrap">
+              <span class="gallery-tag">System Settings</span>
+              <img src="assets/images/Screenshot_20261025_123240.jpg" alt="Settings screen with appearance and permissions" loading="lazy">
+              <div class="gallery-zoom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3>Appearance & System Controls</h3>
+              <p>Configure dark mode, notification drawer quick-toggles, display-over-other-apps permissions, and search timeouts.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Settings: Word Lists & Strategy -->
+        <div class="gallery-item" data-category="settings" onclick="openLightbox(5)">
+          <div class="gallery-card">
+            <div class="gallery-img-wrap">
+              <span class="gallery-tag">Tuning & Filters</span>
+              <img src="assets/images/Screenshot_20261025_123246.jpg" alt="Settings screen with word filter lists and solver options" loading="lazy">
+              <div class="gallery-zoom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3>Smart Filters & Strategy Settings</h3>
+              <p>Adjust negative keyword triggers (NOT, NEVER, EXCEPT), stopword lists, and profile ROI calibration options.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Overflow Navigation Drawer -->
+        <div class="gallery-item" data-category="interface" onclick="openLightbox(6)">
+          <div class="gallery-card">
+            <div class="gallery-img-wrap">
+              <span class="gallery-tag">Navigation</span>
+              <img src="assets/images/Screenshot_20261025_123149.jpg" alt="Home Screen overflow menu" loading="lazy">
+              <div class="gallery-zoom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3>Quick Access Drawer</h3>
+              <p>Rapid access to Quick Test, Preferences, Diagnostic Logs, User Guide, and Frequently Asked Questions.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Android Home Integration -->
+        <div class="gallery-item" data-category="interface" onclick="openLightbox(7)">
+          <div class="gallery-card">
+            <div class="gallery-img-wrap">
+              <span class="gallery-tag">On-Device</span>
+              <img src="assets/images/Screenshot_20261025_123138.jpg" alt="Android launcher showing Triya Pro icon" loading="lazy">
+              <div class="gallery-zoom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3>Native Android Experience</h3>
+              <p>Lightweight native installation on Android. Seamlessly coexists with standard trivia tournament games.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Lightbox Modal -->
+  <div id="lightboxModal" class="lightbox-modal" onclick="closeLightboxOnBackdrop(event)">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()" title="Close (Esc)">&times;</button>
+      <button class="lightbox-nav prev" onclick="navigateLightbox(-1)" title="Previous">&lsaquo;</button>
+      <button class="lightbox-nav next" onclick="navigateLightbox(1)" title="Next">&rsaquo;</button>
+      
+      <div class="lightbox-media-container">
+        <img id="lightboxImg" src="" alt="Full view screenshot">
+      </div>
+      
+      <div class="lightbox-caption">
+        <div class="lightbox-badge" id="lightboxBadge">Live Tournament</div>
+        <h4 id="lightboxTitle">Title</h4>
+        <p id="lightboxDesc">Description</p>
+        <span class="lightbox-counter" id="lightboxCounter">1 / 8</span>
+      </div>
+    </div>
+  </div>
+
   <!-- Capabilities -->
   <section id="features" class="features-section">
     <div class="container">
@@ -96,19 +308,19 @@
         <div class="feature-box">
           <div class="feature-icon">⚡</div>
           <h3>Zero-Friction Workflow</h3>
-          <p>No typing, no vocal dictation. A single tap captures the ROI and highlights the winning answer in emerald green within one second.</p>
+          <p>No typing, no vocal dictation. A single tap captures the game ROI and highlights the winning candidate in emerald green within one second.</p>
         </div>
 
         <div class="feature-box">
           <div class="feature-icon">🔄</div>
           <h3>Negative Logic Detection</h3>
-          <p>Automatically flags trick questions containing "NOT", "NEVER", "EXCEPT", and inverts scoring math to pick the exception seamlessly.</p>
+          <p>Automatically detects trick tournament questions containing "NOT", "NEVER", "EXCEPT", and inverts scoring rankings seamlessly.</p>
         </div>
 
         <div class="feature-box">
           <div class="feature-icon">📐</div>
           <h3>Universal Visual Calibrator</h3>
-          <p>Easily adjusts to any phone screen, orientation, or quiz app layout with draggable question and answer bounding boxes.</p>
+          <p>Easily adapts to any phone screen, aspect ratio, or quiz app layout with draggable question and answer bounding boxes.</p>
         </div>
 
         <div class="feature-box">
@@ -126,7 +338,7 @@
         <div class="feature-box">
           <div class="feature-icon">🔒</div>
           <h3>Zero Data Footprint</h3>
-          <p>No user accounts, no telemetry logging, no persistent screen recording. Operates strictly in volatile RAM.</p>
+          <p>No user accounts, no telemetry logging, no persistent screen recording. Operates strictly in volatile RAM on-device.</p>
         </div>
       </div>
     </div>
@@ -137,7 +349,7 @@
     <div class="container">
       <div class="section-head">
         <h2>Why Traditional Methods Fail in 10-Second Rounds</h2>
-        <p>A breakdown of competitive trivia assistive approaches.</p>
+        <p>A breakdown of competitive trivia assistive approaches under strict tournament countdowns.</p>
       </div>
 
       <div class="table-wrapper">
