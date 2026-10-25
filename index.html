@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triya Pro — Live Trivia Intelligence Companion</title>
+  <meta name="description" content="Triya Pro is a precision on-device live quiz intelligence companion engineered for fast-paced mobile trivia tournaments. Sub-second speed, 94.8% accuracy.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-bar">
+      <a href="#" class="brand">
+        <img src="assets/logo.svg" alt="Triya Pro Logo">
+        <span class="brand-text">Triya <span>Pro</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Capabilities</a></li>
+        <li><a href="#metrics">Benchmarks</a></li>
+        <li><a href="#comparison">Why Triya</a></li>
+        <li><a href="#tournaments">Platforms</a></li>
+      </ul>
+      <a href="https://github.com/prayasdev" target="_blank" class="btn-cta">
+        <span>GitHub @prayasdev</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="badge-pill">
+        <span>⚡ SUB-SECOND TOURNAMENT ASSIST</span>
+      </div>
+      <h1>Dominating 10-Second<br><span>Live Trivia Tournaments.</span></h1>
+      <p>
+        Engineered specifically for countdown-driven mobile quiz shows. Instant screen capture, on-device optical recognition, and statistical candidate verification before the clock runs out.
+      </p>
+
+      <!-- Interactive HUD Simulator -->
+      <div class="hud-demo-container">
+        <div class="hud-demo-header">
+          <span class="hud-live-tag"><span class="hud-live-dot"></span> Interactive HUD Preview</span>
+          <span>Click Overlay to Scan Next</span>
+        </div>
+        <div id="hudContainer">
+          <!-- Rendered by script.js -->
+        </div>
+        <div class="demo-instruction">
+          ⚡ <em>Live Interactive Simulator: Click the card to trigger next question scan.</em>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Counters -->
+  <section id="metrics" class="metrics-section">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-val">&lt;<span>1.1</span>s</div>
+          <div class="metric-label">Pipeline Turnaround</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val"><span>94.8</span>%</div>
+          <div class="metric-label">Tournament Accuracy</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val"><span>100</span>%</div>
+          <div class="metric-label">On-Device Privacy</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val">&lt;<span>65</span>MB</div>
+          <div class="metric-label">Memory Footprint</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Engineered for Live Competitive Play</h2>
+        <p>Built from the ground up to solve the constraints of mobile quiz platforms.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon">⚡</div>
+          <h3>Zero-Friction Workflow</h3>
+          <p>No typing, no vocal dictation. A single tap captures the ROI and highlights the winning answer in emerald green within one second.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">🔄</div>
+          <h3>Negative Logic Detection</h3>
+          <p>Automatically flags trick questions containing "NOT", "NEVER", "EXCEPT", and inverts scoring math to pick the exception seamlessly.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">📐</div>
+          <h3>Universal Visual Calibrator</h3>
+          <p>Easily adjusts to any phone screen, orientation, or quiz app layout with draggable question and answer bounding boxes.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">🥷</div>
+          <h3>Stealth Minimalist HUD</h3>
+          <p>Occupies less than 12% of screen area. Floating heads-up display sits smoothly over live streams without obscuring touch controls.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">🔔</div>
+          <h3>Status Bar Control Pill</h3>
+          <p>Control the assistant directly from Android status bar notifications with an instant 1-tap "Turn Off" toggle.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">🔒</div>
+          <h3>Zero Data Footprint</h3>
+          <p>No user accounts, no telemetry logging, no persistent screen recording. Operates strictly in volatile RAM.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section id="comparison" class="comparison-section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Why Traditional Methods Fail in 10-Second Rounds</h2>
+        <p>A breakdown of competitive trivia assistive approaches.</p>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Approach</th>
+              <th>Average Speed</th>
+              <th>Success Rate</th>
+              <th>Handling of "NOT / EXCEPT"</th>
+              <th>Usability in 10s Window</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td><strong>⚡ Triya Pro</strong></td>
+              <td><strong>0.8s – 1.2s</strong></td>
+              <td><span class="badge-win">94.8%</span></td>
+              <td>Automated Inversion</td>
+              <td><span class="badge-win">Seamless 1-Tap</span></td>
+            </tr>
+            <tr>
+              <td>Manual Search (Google)</td>
+              <td>8s – 14s</td>
+              <td><span class="badge-fail">28%</span></td>
+              <td>Manual Reading</td>
+              <td><span class="badge-fail">Fails (Clock expires)</span></td>
+            </tr>
+            <tr>
+              <td>Generic Chatbots (ChatGPT / Claude)</td>
+              <td>4s – 8s</td>
+              <td><span class="badge-fail">45%</span></td>
+              <td>Variable Accuracy</td>
+              <td><span class="badge-fail">High Latency</span></td>
+            </tr>
+            <tr>
+              <td>Legacy Screen OCR Tools</td>
+              <td>3s – 5s</td>
+              <td>60%</td>
+              <td>Often Misses</td>
+              <td>Clunky Popups</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported Platforms -->
+  <section id="tournaments" class="platforms-section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Multi-Platform Tournament Support</h2>
+        <p>Calibrate once, dominate anytime across all major mobile tournament formats.</p>
+      </div>
+
+      <div class="platform-pills">
+        <div class="platform-pill">🎮 Loco Trivia</div>
+        <div class="platform-pill">🎮 HQ Trivia</div>
+        <div class="platform-pill">🎮 Swagbucks LIVE</div>
+        <div class="platform-pill">🎮 BrainBaazi</div>
+        <div class="platform-pill">🎮 Qureka</div>
+        <div class="platform-pill">🎮 Custom Live Quizzes</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <a href="#" class="brand">
+        <img src="assets/logo.svg" alt="Triya Pro Logo" style="width: 28px; height: 28px;">
+        <span class="brand-text" style="font-size: 17px;">Triya <span>Pro</span></span>
+      </a>
+      <p class="footer-note">
+        Proprietary technology developed by <a href="https://github.com/prayasdev" target="_blank">@prayasdev</a>.
+      </p>
+      <p class="footer-note" style="font-size: 11.5px; opacity: 0.6;">
+        All trademarks, game logos, and brand names are property of their respective owners.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
