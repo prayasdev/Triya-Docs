@@ -2,9 +2,10 @@
 > **High-Velocity Live Trivia & Quiz Intelligence Companion**  
 > Developed by **[prayasdev](https://github.com/prayasdev)**
 
-[![Release](https://img.shields.io/badge/Release-v1.1.0-blue.svg)](https://github.com/prayasdev/triya/releases/tag/v1.1.0)
+[![Version](https://img.shields.io/badge/Version-v1.1.0-blue.svg)](https://github.com/prayasdev)
 [![Showcase](https://img.shields.io/badge/Showcase-Live%20Platform-brightgreen.svg)](https://prayasdev.github.io/Triya-Docs)
-[![Access](https://img.shields.io/badge/Access-Private%20Beta%20Verified-purple.svg)](#-private-access-verification--auth-security-v110)
+[![Access](https://img.shields.io/badge/Access-Private%20Beta-purple.svg)](https://github.com/prayasdev)
+[![Contact](https://img.shields.io/badge/Contact-@prayasdev-emerald.svg)](https://github.com/prayasdev)
 [![Accuracy](https://img.shields.io/badge/Tournament%20Accuracy-94.8%25-emerald.svg)](#)
 [![Speed](https://img.shields.io/badge/Response%20Time-%3C1.2s-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Android-8.0%2B%20(API%2026--35)-black.svg)](https://developer.android.com)
@@ -146,12 +147,12 @@ Triya Pro supports all major mobile trivia and game-show apps:
 
 ---
 
-## 📥 Releases & Download
+## 🔒 Private Beta Access & Developer Contact
 
-Grab the verified release build:
-* **Current Version:** `v1.1.0`
-* **APK Download:** [Triya-v1.1.0.apk](https://github.com/prayasdev/triya/releases/tag/v1.1.0)
-* **Access Requirements:** Authorized Google Account on the beta testing whitelist.
+Triya Pro is distributed exclusively as a private, whitelist-verified beta for authorized testers. Public distribution is restricted.
+
+For beta enrollment, demo access, licensing, or commercial inquiries, contact the developer directly on GitHub:
+👉 **[Contact @prayasdev on GitHub](https://github.com/prayasdev)**
 
 ---
 

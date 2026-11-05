@@ -1120,7 +1120,7 @@ tr:last-child td {
   max-width: 680px;
 }
 
-.btn-download {
+.btn-contact {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1136,7 +1136,7 @@ tr:last-child td {
   box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
 }
 
-.btn-download:hover {
+.btn-contact:hover {
   background: #059669;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45);
