@@ -2,14 +2,19 @@
 > **High-Velocity Live Trivia & Quiz Intelligence Companion**  
 > Developed by **[prayasdev](https://github.com/prayasdev)**
 
+[![Release](https://img.shields.io/badge/Release-v1.1.0-blue.svg)](https://github.com/prayasdev/triya/releases/tag/v1.1.0)
 [![Showcase](https://img.shields.io/badge/Showcase-Live%20Platform-brightgreen.svg)](https://prayasdev.github.io/Triya-Docs)
+[![Access](https://img.shields.io/badge/Access-Private%20Beta%20Verified-purple.svg)](#-private-access-verification--auth-security-v110)
 [![Accuracy](https://img.shields.io/badge/Tournament%20Accuracy-94.8%25-emerald.svg)](#)
 [![Speed](https://img.shields.io/badge/Response%20Time-%3C1.2s-blue.svg)](#)
-[![Design](https://img.shields.io/badge/UI-Adaptive%20Dark%20HUD-black.svg)](#)
+[![Platform](https://img.shields.io/badge/Android-8.0%2B%20(API%2026--35)-black.svg)](https://developer.android.com)
 
 Triya Pro is a precision on-device live quiz intelligence assistant engineered specifically for fast-paced, countdown-driven trivia competitions (*Loco, HQ Trivia, BrainBaazi, Swagbucks LIVE, Qureka*).
 
 Built from the ground up to solve the 10-second countdown dilemma, Triya Pro captures the screen, isolates the game zone, and delivers verified high-confidence answers in a fraction of a second—all via a minimal, non-intrusive floating heads-up display.
+
+> [!NOTE]
+> **What's New in v1.1.0:** Private Access Verification & Auth Security powered by Google Credential Manager and Cloud Firestore tester whitelisting, featuring 48-hour offline grace caching and zero game telemetry.
 
 ---
 
@@ -35,6 +40,42 @@ Built from the ground up to solve the 10-second countdown dilemma, Triya Pro cap
 
 ---
 
+## 🔒 Private Access Verification & Auth Security (v1.1.0)
+
+Version **v1.1.0** introduces a robust, enterprise-grade access verification layer protecting private testing builds while maintaining zero impact on live tournament speed:
+
+```
+                      ┌──────────────────────────────────────┐
+                      │        App Launch & AuthGate         │
+                      └──────────────────┬───────────────────┘
+                                         ▼
+                      ┌──────────────────────────────────────┐
+                      │    Google Sign-In Authentication     │
+                      │   (Android 14+ Credential Manager)   │
+                      └──────────────────┬───────────────────┘
+                                         ▼
+                      ┌──────────────────────────────────────┐
+                      │   Cloud Firestore Whitelist Check    │
+                      │  collection("allowed_users").doc(id) │
+                      └──────────┬───────────────────┬───────┘
+                                 │                   │
+                        Authorized                   Denied / Offline
+                                 │                   │
+                                 ▼                   ▼
+                      ┌─────────────────────┐   ┌─────────────────────────┐
+                      │ Unlocks Full HUD    │   │ Offline Grace (48 hrs)  │
+                      │ & Floating Assistant│   │ or Access Denied Screen │
+                      └─────────────────────┘   └─────────────────────────┘
+```
+
+* **Modern Credential Manager:** Seamless 1-tap Google Sign-In utilizing Google Identity (`androidx.credentials` + `GoogleIdTokenCredential`).
+* **Cloud Firestore Whitelist Gate:** Real-time query to `allowed_users/{email}`. Only developer-approved beta testers are granted assistant execution privileges.
+* **48-Hour Offline Grace Cache:** Tournaments often take place over variable network conditions. Previously verified accounts enjoy a 48-hour local cryptographic grace period so connectivity dips never disrupt game rounds.
+* **Streamlined UI Gate (`AuthGate`):** Smooth animated transitions between Unauthenticated, Loading, Access Denied (with 1-tap email clipboard copy for rapid whitelisting and developer contact), and Authorized states.
+* **Zero Telemetry Guarantee:** User identity is strictly used for licensing gatekeeping. All screen OCR, search dispatches, and mathematical candidate rankings remain 100% on-device in volatile RAM with zero logging or external telemetry.
+
+---
+
 ## ⚡ The 10-Second Problem
 
 Live trivia games give contestants only **10 seconds** to read the question, evaluate 3 options, and tap an answer. 
@@ -44,7 +85,7 @@ Live trivia games give contestants only **10 seconds** to read the question, eva
 | **Manual Google Search** | 8 – 14 seconds | ❌ ~28% | Too slow to type or voice search before the clock expires. |
 | **Generic Chatbots (ChatGPT / Gemini)** | 4 – 8 seconds | ❌ ~45% | High latency, verbose answers, misses exact multiple-choice context. |
 | **Traditional OCR Apps** | 3 – 5 seconds | ⚠️ ~60% | Slow text parsing, clunky full-screen popups, frequent misses on negative questions. |
-| **Triya Pro** | **0.8 – 1.3 seconds** | **✅ 94.8%** | **Instant 1-tap capture, zero latency, verified candidate ranking, non-intrusive HUD.** |
+| **Triya Pro (v1.1.0)** | **0.8 – 1.3 seconds** | **✅ 94.8%** | **Instant 1-tap capture, zero latency, verified candidate ranking, non-intrusive HUD.** |
 
 ---
 
@@ -87,6 +128,8 @@ Triya Pro has been extensively benchmarked against archived and live tournament 
 | **Screen Footprint** | **< 12% screen area** |
 | **Memory Consumption** | **< 65 MB on-device** |
 | **Battery Drain** | **Minimal (Zero background polling)** |
+| **Security & Auth Verification** | **Google Identity + Firestore Whitelist** |
+| **Offline Tolerance** | **48 Hours Grace Period** |
 
 ---
 
@@ -103,6 +146,15 @@ Triya Pro supports all major mobile trivia and game-show apps:
 
 ---
 
+## 📥 Releases & Download
+
+Grab the verified release build:
+* **Current Version:** `v1.1.0`
+* **APK Download:** [Triya-v1.1.0.apk](https://github.com/prayasdev/triya/releases/tag/v1.1.0)
+* **Access Requirements:** Authorized Google Account on the beta testing whitelist.
+
+---
+
 ## 🖥️ Live Product Showcase
 
 Explore the interactive web showcase, screenshot gallery, and simulated live overlay at:  
@@ -114,7 +166,7 @@ Explore the interactive web showcase, screenshot gallery, and simulated live ove
 
 Triya Pro is a private proprietary technology developed by **[prayasdev](https://github.com/prayasdev)**.
 
-For private demos, research collaborations, licensing, or commercial inquiries:
+For private access requests, demos, research collaborations, licensing, or commercial inquiries:
 * **GitHub:** [@prayasdev](https://github.com/prayasdev)
 * **Website:** [Triya-Docs Showcase](https://prayasdev.github.io/Triya-Docs)
 

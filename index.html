@@ -23,6 +23,7 @@
       <ul class="nav-links">
         <li><a href="#showcase">Showcase</a></li>
         <li><a href="#features">Capabilities</a></li>
+        <li><a href="#security">Security & Access</a></li>
         <li><a href="#metrics">Benchmarks</a></li>
         <li><a href="#comparison">Why Triya</a></li>
         <li><a href="#tournaments">Platforms</a></li>
@@ -38,7 +39,7 @@
   <section class="hero">
     <div class="container">
       <div class="badge-pill">
-        <span>⚡ SUB-SECOND TOURNAMENT ASSIST</span>
+        <span>⚡ v1.1.0 RELEASE • PRIVATE ACCESS & SUB-SECOND INTEL</span>
       </div>
       <h1>Dominating 10-Second<br><span>Live Trivia Tournaments.</span></h1>
       <p class="hero-desc">
@@ -103,8 +104,8 @@
           <div class="metric-label">Tournament Accuracy</div>
         </div>
         <div class="metric-card">
-          <div class="metric-val"><span>100</span>%</div>
-          <div class="metric-label">On-Device Privacy</div>
+          <div class="metric-val"><span>48</span>h</div>
+          <div class="metric-label">Offline Grace Period</div>
         </div>
         <div class="metric-card">
           <div class="metric-val">&lt;<span>65</span>MB</div>
@@ -337,8 +338,81 @@
 
         <div class="feature-box">
           <div class="feature-icon">🔒</div>
-          <h3>Zero Data Footprint</h3>
-          <p>No user accounts, no telemetry logging, no persistent screen recording. Operates strictly in volatile RAM on-device.</p>
+          <h3>Private Access Gate</h3>
+          <p>Version 1.1.0 introduces Google Identity authorization via Android Credential Manager and Cloud Firestore tester whitelist verification.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">🛡️</div>
+          <h3>Zero-Telemetry OCR</h3>
+          <p>Authentication is strictly for access control. Live frame captures, OCR recognition, and heuristic scoring operate strictly in volatile on-device RAM.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security & Access Section (v1.1.0) -->
+  <section id="security" class="security-section">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge-pill mini-badge">
+          <span>🔒 v1.1.0 SECURITY LAYER</span>
+        </div>
+        <h2>Private Access & Cloud Verification</h2>
+        <p>Enterprise-grade tester authorization engineered to protect private beta builds without adding latency to live gameplay.</p>
+      </div>
+
+      <div class="security-grid">
+        <div class="security-card">
+          <div class="security-icon-header">
+            <span class="sec-badge">Credential Manager</span>
+            <span class="sec-icon">🔑</span>
+          </div>
+          <h3>1-Tap Google Identity</h3>
+          <p>Seamless native authentication powered by Android Credential Manager. No clunky passwords or manual tokens—sign in with verified Google accounts in a single tap.</p>
+        </div>
+
+        <div class="security-card">
+          <div class="security-icon-header">
+            <span class="sec-badge">Cloud Firestore</span>
+            <span class="sec-icon">⚡</span>
+          </div>
+          <h3>Dynamic Whitelist Enforcement</h3>
+          <p>Real-time verification against server-side authorization records. Instant access grant/revocation per tester email with zero app redeployments required.</p>
+        </div>
+
+        <div class="security-card">
+          <div class="security-icon-header">
+            <span class="sec-badge">Fault Tolerance</span>
+            <span class="sec-icon">🌐</span>
+          </div>
+          <h3>48-Hour Offline Grace Cache</h3>
+          <p>Never forfeit a live game over flaky hotel Wi-Fi or cellular dead zones. Previously validated beta testers enjoy a 48-hour local cryptographic grace period.</p>
+        </div>
+
+        <div class="security-card">
+          <div class="security-icon-header">
+            <span class="sec-badge">Privacy First</span>
+            <span class="sec-icon">🛡️</span>
+          </div>
+          <h3>Air-Gapped Gameplay Pipeline</h3>
+          <p>Complete separation between licensing identity and tournament solving. Game screen frames, OCR tokens, and scoring formulas never leave device memory.</p>
+        </div>
+      </div>
+
+      <!-- AuthGate Showcase Callout -->
+      <div class="auth-callout-banner">
+        <div class="auth-callout-content">
+          <div class="auth-callout-text">
+            <h4>Streamlined Onboarding with Compose AuthGate</h4>
+            <p>Featuring dedicated unauthenticated, access-denied, and verified states with a 1-tap email copy button for rapid tester onboarding and direct developer contact.</p>
+          </div>
+          <div class="auth-callout-action">
+            <a href="https://github.com/prayasdev/triya/releases/tag/v1.1.0" target="_blank" class="btn-download">
+              <span>Download Triya v1.1.0 APK</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -365,7 +439,7 @@
           </thead>
           <tbody>
             <tr class="highlight-row">
-              <td><strong>⚡ Triya Pro</strong></td>
+              <td><strong>⚡ Triya Pro (v1.1.0)</strong></td>
               <td><strong>0.8s – 1.2s</strong></td>
               <td><span class="badge-win">94.8%</span></td>
               <td>Automated Inversion</td>
@@ -425,7 +499,7 @@
         <span class="brand-text" style="font-size: 17px;">Triya <span>Pro</span></span>
       </a>
       <p class="footer-note">
-        Proprietary technology developed by <a href="https://github.com/prayasdev" target="_blank">@prayasdev</a>.
+        <strong>Triya Pro v1.1.0</strong> • Proprietary technology developed by <a href="https://github.com/prayasdev" target="_blank">@prayasdev</a>.
       </p>
       <p class="footer-note" style="font-size: 11.5px; opacity: 0.6;">
         All trademarks, game logos, and brand names are property of their respective owners.
